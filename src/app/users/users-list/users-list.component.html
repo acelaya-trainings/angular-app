@@ -1,0 +1,28 @@
+<h3>Users list</h3>
+<create-user (userChange)="addUser($event)"></create-user>
+<br>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users; let i = index">
+            <td>{{user != null ? user.name : ''}}</td>
+            <td>{{user != null ? user.email : ''}}</td>
+            <td class="text-right">
+                <button type="button" class="btn btn-sm btn-danger">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </button>
+                <button type="button" class="btn btn-sm btn-primary">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
