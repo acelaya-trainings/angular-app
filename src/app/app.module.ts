@@ -18,6 +18,8 @@ import {LocalStorageModule} from "angular-2-local-storage";
 import {CreateUserComponent} from "./users/create-user/create-user.component";
 import {UserService} from "./users/shared/user.service";
 import {DeleteUserComponent} from "./users/delete-user/delete-user.component";
+import {EditUserComponent} from "./users/edit-user/edit-user.component";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
     declarations: [
@@ -31,6 +33,7 @@ import {DeleteUserComponent} from "./users/delete-user/delete-user.component";
         UsersListComponent,
         CreateUserComponent,
         DeleteUserComponent,
+        EditUserComponent,
     ],
     imports: [
         BrowserModule,
@@ -41,13 +44,14 @@ import {DeleteUserComponent} from "./users/delete-user/delete-user.component";
         LocalStorageModule.withConfig({
             prefix: 'sumofuturo',
             storageType: 'localStorage'
-        })
+        }),
+        NgbModule.forRoot(),
     ],
     providers: [
         GithubService,
         UserService,
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule {
 
