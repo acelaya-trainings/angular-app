@@ -1,8 +1,6 @@
 import {Component, EventEmitter, Input, Output} from "@angular/core";
 import {UserService} from "../shared/user.service";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {User} from "../shared/user.model";
-import {UserModalComponent} from "../user-modal/user-modal.component";
 import {DeleteUserConfirmComponent} from "../delete-user-confirm/delete-user-confirm.component";
 
 @Component({
