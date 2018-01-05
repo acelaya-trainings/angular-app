@@ -15,25 +15,33 @@ export class UserService {
     createUser(user: User): Array<User> {
         let users = this.listUsers();
         users.push(user);
-        this.setUsers(users);
+        this.storeUsers(users);
         return users;
     }
 
     deleteUser(index: number): Array<User> {
         let users = this.listUsers();
-        delete users[index];
-        this.setUsers(users);
+        if (typeof users[index] === 'undefined') {
+            return users;
+        }
+
+        users.splice(index, 1);
+        this.storeUsers(users);
         return users;
     }
 
     updateUser(index: number, user: User): Array<User> {
         let users = this.listUsers();
+        if (typeof users[index] === 'undefined') {
+            return users;
+        }
+
         users[index] = user;
-        this.setUsers(users);
+        this.storeUsers(users);
         return users;
     }
 
-    private setUsers(users): void {
+    private storeUsers(users): void {
         this.storage.set(UserService.STORAGE_KEY, users);
     }
 
