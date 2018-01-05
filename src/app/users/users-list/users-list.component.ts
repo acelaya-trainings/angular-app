@@ -20,12 +20,11 @@ export class UsersListComponent implements OnInit {
         this.users.push(user);
     }
 
-    deleteUser(index: number): void {
+    removeUser(index: number): void {
         if (typeof this.users[index] === 'undefined') {
             return;
         }
 
         this.users.splice(index, 1);
-        this.userService.deleteUser(index);
     }
 }

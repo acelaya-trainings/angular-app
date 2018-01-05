@@ -17,35 +17,37 @@ import {UsersListComponent} from "./users/users-list/users-list.component";
 import {LocalStorageModule} from "angular-2-local-storage";
 import {CreateUserComponent} from "./users/create-user/create-user.component";
 import {UserService} from "./users/shared/user.service";
+import {DeleteUserComponent} from "./users/delete-user/delete-user.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AboutComponent,
-    RepoBrowserComponent,
-    RepoListComponent,
-    RepoDetailComponent,
-    HomeComponent,
-    ContactComponent,
-    UsersListComponent,
-    CreateUserComponent,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: false }),
-    LocalStorageModule.withConfig({
-        prefix: 'sumofuturo',
-        storageType: 'localStorage'
-    })
-  ],
-  providers: [
-    GithubService,
-    UserService,
-  ],
-  bootstrap: [ AppComponent ]
+    declarations: [
+        AppComponent,
+        AboutComponent,
+        RepoBrowserComponent,
+        RepoListComponent,
+        RepoDetailComponent,
+        HomeComponent,
+        ContactComponent,
+        UsersListComponent,
+        CreateUserComponent,
+        DeleteUserComponent,
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpModule,
+        RouterModule.forRoot(rootRouterConfig, {useHash: false}),
+        LocalStorageModule.withConfig({
+            prefix: 'sumofuturo',
+            storageType: 'localStorage'
+        })
+    ],
+    providers: [
+        GithubService,
+        UserService,
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 
