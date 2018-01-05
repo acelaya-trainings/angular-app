@@ -27,4 +27,8 @@ export class UsersListComponent implements OnInit {
 
         this.users.splice(index, 1);
     }
+
+    updateUser(index: number, user: User) {
+        this.users[index] = user;
+    }
 }

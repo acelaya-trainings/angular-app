@@ -20,6 +20,7 @@ import {UserService} from "./users/shared/user.service";
 import {DeleteUserComponent} from "./users/delete-user/delete-user.component";
 import {EditUserComponent} from "./users/edit-user/edit-user.component";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {UserModalComponent} from "./users/user-modal/user-modal.component";
 
 @NgModule({
     declarations: [
@@ -34,6 +35,10 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
         CreateUserComponent,
         DeleteUserComponent,
         EditUserComponent,
+        UserModalComponent,
+    ],
+    entryComponents: [
+        UserModalComponent,
     ],
     imports: [
         BrowserModule,
