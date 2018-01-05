@@ -21,6 +21,7 @@ import {DeleteUserComponent} from "./users/delete-user/delete-user.component";
 import {EditUserComponent} from "./users/edit-user/edit-user.component";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {UserModalComponent} from "./users/user-modal/user-modal.component";
+import {DeleteUserConfirmComponent} from "./users/delete-user-confirm/delete-user-confirm.component";
 
 @NgModule({
     declarations: [
@@ -36,9 +37,11 @@ import {UserModalComponent} from "./users/user-modal/user-modal.component";
         DeleteUserComponent,
         EditUserComponent,
         UserModalComponent,
+        DeleteUserConfirmComponent,
     ],
     entryComponents: [
         UserModalComponent,
+        DeleteUserConfirmComponent,
     ],
     imports: [
         BrowserModule,
